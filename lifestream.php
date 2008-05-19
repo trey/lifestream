@@ -56,7 +56,7 @@ $merged = SimplePie::merge_items($merge, 0, 20); // Get the 20 most recent items
 
 		<?php else: // Not Twitter ?>
 
-		<h2><a href="<?php echo $item->get_permalink(); ?>"><?php echo $item->get_title(); ?></a></h2>
+		<h3><a href="<?php echo $item->get_permalink(); ?>"><?php echo $item->get_title(); ?></a></h3>
 		<div class="content">
 			<?php echo $item->get_description(); ?>
 		</div><!-- .content -->
