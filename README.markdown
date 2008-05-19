@@ -1,0 +1,3 @@
+- Add your feeds to the `$feed` array and your Twitter username to `$twitter_user` (as well as the feed).
+- Define CSS rules for the different feeds if you want (`.twitter`, `.flickr`, etc.).
+- Bring. It. Around. Town.
