@@ -39,8 +39,9 @@ $merged = SimplePie::merge_items($merge, 0, 20); // Get the 20 most recent items
 			$thedate =  $item->get_date('F j, Y');
 			echo '<h2>' . $thedate . '</h2>';
 		}
+		$theclass = getClass($item->feed->get_permalink());
 ?>
-	<div class="item <?php echo getClass($item->feed->get_permalink()); ?>">
+	<div class="item <?php echo $theclass; ?>">
 		<?php if (stripos($item->feed->get_permalink(), 'twitter.com') ): // This is a Tweet. ?>
 
 		<div class="content">
