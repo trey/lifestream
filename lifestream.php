@@ -57,7 +57,9 @@ $merged = SimplePie::merge_items($merge, 0, 20); // Get the 20 most recent items
 
 		<?php else: // Not Twitter ?>
 
+		<?php if (!stripos($item->feed->get_permalink(), 'tumblr.com') ): // Don't show titles on Tumblr posts. ?>
 		<h3><a href="<?php echo $item->get_permalink(); ?>"><?php echo $item->get_title(); ?></a></h3>
+		<?php endif; ?>
 		<div class="content">
 			<?php echo $item->get_description(); ?>
 		</div><!-- .content -->
@@ -66,5 +68,6 @@ $merged = SimplePie::merge_items($merge, 0, 20); // Get the 20 most recent items
 		<div class="date"><small>Posted at <?php echo $item->get_date('g:i a'); // TODO get timezones working properly. ?></small></div>
 	</div><!-- .item -->
 	<?php endforeach; ?>
+	<div class="note"><a href="http://github.com/trey/lifestream/">Make your own Lifestream. &rarr;</a></div>
 </body>
 </html>
