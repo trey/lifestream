@@ -16,6 +16,7 @@ function getClass($url)
 	return $class;
 }
 
+date_default_timezone_set('America/Chicago'); // Change this to your timezone.
 require_once('simplepie.inc');
 foreach ($feeds as $feed) {
 	$merge[] = new SimplePie($feed);
