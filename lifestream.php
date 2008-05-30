@@ -66,7 +66,7 @@ $merged = SimplePie::merge_items($merge, 0, 20); // Get the 20 most recent items
 		</div><!-- .content -->
 
 		<?php endif; // end of Twitter check ?>
-		<div class="date"><small>Posted at <?php echo $item->get_date('g:i a'); // TODO get timezones working properly. ?></small></div>
+		<div class="date"><small>Posted at <?php echo $item->get_date('g:i a'); ?></small></div>
 	</div><!-- .item -->
 	<?php endforeach; ?>
 	<div class="note"><a href="http://github.com/trey/lifestream/">Make your own Lifestream. &rarr;</a></div>
